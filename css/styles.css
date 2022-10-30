@@ -9,7 +9,7 @@
     --button-servise: #188ce8;
     --mail-tel: rgba(255, 255, 255, 0.6);
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --new-timing-function: 3250ms;
+    --new-timing-function: 250ms;
   }
 
   p,
