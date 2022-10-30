@@ -8,7 +8,8 @@
     --team-background: #F5F4FA;
     --button-servise: #188ce8;
     --mail-tel: rgba(255, 255, 255, 0.6);
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --new-timing-function: 3250ms;
   }
 
   p,
@@ -114,12 +115,13 @@
     display: flex;
     gap: 50px;
     margin-left: 94px;
+   
 
   }
   .nav-list :hover,
   .nav-list :focus{
     color: var(--hover-color);
-    transition: opacity 250ms var(--timing-function);
+ 
   } 
   
   .nav-link{
@@ -132,7 +134,7 @@
   padding-bottom: 32px;
   padding-top: 32px;
   position: relative;
-
+transition: color var(--new-timing-function) var(--timing-function);
   }
   .current{
     color: var(--hover-color);
@@ -149,9 +151,9 @@
     background-color: var(--hover-color);
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     opacity: 0;
-    transition: opacity 250ms var(--timing-function);
+
   }
   
  .current::after{
@@ -180,6 +182,7 @@
     padding-bottom: 32px;
     display: flex;
     align-items: center;
+    transition: color var(--new-timing-function) var(--timing-function);
   }
   .icon-envelope{
     fill: currentColor;
@@ -196,6 +199,8 @@
     padding-top: 32px;
     padding-bottom: 32px;
     display: flex;
+    transition: color var(--new-timing-function) var(--timing-function);
+
   }
   .icon-smartphone{
     fill: currentColor;
@@ -205,7 +210,7 @@
   .contacts :hover,
   .contacts :focus{
     color: var(--hover-color);
-    transition: opacity 250ms var(--timing-function);
+    
   }
 
   /*---------Hero-----*/
@@ -244,14 +249,16 @@
     cursor: pointer;
     padding: 10px 32px;
     border-color: transparent;
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+ transition: color var(--new-timing-function) var(--timing-function),
+     background-color var(--new-timing-function) var(--timing-function);
   }
   .button:hover,
   .button:focus{
     background-color: var(--button-servise);
-    transition: opacity 250ms var(--timing-function);
+   
+    
 
   }
   /*-----The End Hero----*/
@@ -406,6 +413,7 @@ bottom: 0;
     display: flex;
     justify-content: center;
     gap: 10px;
+    
 
   }
   .social-list-item{
@@ -424,6 +432,8 @@ bottom: 0;
     align-items: center;
     justify-content: center;
     color:#AFB1B8 ;
+     transition: color var(--new-timing-function) var(--timing-function),
+     background-color var(--new-timing-function) var(--timing-function);
   }
   .social-list-icon{
     fill: currentColor;
@@ -433,7 +443,7 @@ bottom: 0;
   .social-list-link :focus{
     background-color: #2196F3;
     color: #FFFFFF;
-    transition: opacity 250ms var(--timing-function);
+    
   }
 
 
@@ -489,7 +499,7 @@ bottom: 0;
   .contacts-list :hover,
   .contacts-list :focus{
     color: var(--hover-color);
-    transition: opacity 250ms var(--timing-function);
+   
   }
 
 
@@ -499,7 +509,8 @@ bottom: 0;
   line-height: 1.71;
   color: var(--background-header);
   display: block;
-
+  transition: color var(--new-timing-function) var(--timing-function);
+    
   }
   .mail-footer,
   .tel-footer{
@@ -508,7 +519,8 @@ bottom: 0;
     font-style: normal;
     line-height: 1.71;
     box-sizing: border-box;
-    
+    transition: color var(--new-timing-function) var(--timing-function);
+     
   }
 
   /*------btn-filter Портфоліо---*/
@@ -527,14 +539,18 @@ bottom: 0;
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
+    transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+  
   }
+
   .btn:hover,
   .btn:focus{
     color: var(--background-header);
   background: var(--hover-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  transition: opacity 250ms var(--timing-function);
+ 
   }
   .btn-filter{
     display: flex;
@@ -584,7 +600,7 @@ padding-left: 24px;
 padding-bottom: 63px;
 height: 100%;
 transform: translateY(100%);
-transition: transform 250ms var(--timing-function);
+transition: transform var(--new-timing-function) var(--timing-function);
 overflow: auto;
 }
 
@@ -598,6 +614,7 @@ overflow: auto;
   .portfol-link{
     display: block;
     text-decoration: none;
+    transition: box-shadow var(--new-timing-function) var(--timing-function);
   
   }
 
@@ -668,6 +685,8 @@ overflow: auto;
     border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: #AFB1B8;
+  transition: color var(--new-timing-function) var(--timing-function),
+  border-color var(--new-timing-function) var(--timing-function);
   }
   .client-lis-icon{
     fill:currentColor;
@@ -733,24 +752,26 @@ overflow: auto;
   .social-link-footer{
     width: 100%;
     height: 100%;
-    background:  rgba(255, 255, 255, 0.1);
+    background-color:  rgba(255, 255, 255, 0.1);
   border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--new-timing-function) var(--timing-function);
+    
     
   }
 
   .social-list-icon-footer{
     fill:#FFFFFF;
   }
+  .social-list-link-footer{
+ transition: background-color var(--new-timing-function) var(--timing-function);
+}
+.social-link-footer:hover{
+  background-color: #2196F3;
+}
 
-  .social-list-link-footer :hover,
-  .social-list-link-footer :focus{
-    background-color: #2196F3;
-    transition: transform 250ms var(--timing-function);
-    
-  }
   .backdrop{
   width: 100%;
   height: 100%;
@@ -796,7 +817,12 @@ border-radius: 4px;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  transition: transform 250ms, var(--timing-function);
+  transition: transform 250ms var(--timing-function),
+   background-color var(--new-timing-function) var(--timing-function);
+}
+.modal-close-icon{
+  fill: currentColor;
+  transition: fill var(--new-timing-function) var(--timing-function);
 }
 
 
@@ -809,8 +835,9 @@ border-radius: 4px;
   .modal-close:hover,
   .modal-close:focus{
     background-color: var(--button-servise);
-    transition: opacity 250ms var(--timing-function);
+    color: chartreuse;
   }
+    
     
 
 
@@ -835,7 +862,3 @@ border-radius: 4px;
   transform: translate(-50%, -50%) rotate(-360deg);
   border-radius: 50%;
 }
-  
-  
-  
-  
