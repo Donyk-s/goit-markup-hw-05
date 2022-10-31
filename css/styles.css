@@ -439,8 +439,8 @@ bottom: 0;
     fill: currentColor;
   }
 
-  .social-list-link :hover,
-  .social-list-link :focus{
+  .social-link:hover,
+  .social-link:focus{
     background-color: #2196F3;
     color: #FFFFFF;
     
@@ -539,9 +539,9 @@ bottom: 0;
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
-    transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
+    transition: color var(--new-timing-function) var(--timing-function),
+    background-color var(--new-timing-function) var(--timing-function),
+    box-shadow var(--new-timing-function) var(--timing-function);
   
   }
 
@@ -624,7 +624,7 @@ overflow: auto;
   0px 4px 4px
   rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--new-timing-function) var(--timing-function);
 
   }
 
@@ -778,7 +778,7 @@ overflow: auto;
   background-color:rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
-transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+transition: opacity var(--new-timing-function) var(--timing-function), visibility var(--new-timing-function) var(--timing-function);
   }
 
   .modal {
@@ -793,7 +793,7 @@ border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--new-timing-function) var(--timing-function);
    transform-origin: top left;
 }
 
@@ -817,12 +817,12 @@ border-radius: 4px;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  transition: transform 250ms var(--timing-function),
+  transition: color var(--new-timing-function) var(--timing-function),
    background-color var(--new-timing-function) var(--timing-function);
 }
 .modal-close-icon{
   fill: currentColor;
-  transition: fill var(--new-timing-function) var(--timing-function);
+  transition: color var(--new-timing-function) var(--timing-function);
 }
 
 
@@ -834,31 +834,16 @@ border-radius: 4px;
 
   .modal-close:hover,
   .modal-close:focus{
-    background-color: var(--button-servise);
-    color: chartreuse;
+color: var(--hover-color);
   }
+.modal-title{
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+}
     
     
 
 
 
-  /*
-   .modal {
-  width: 528px;
-  min-height: 581px;
-  background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
- 0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0);
-  transition: transform 300ms linear, border-radius 300ms linear;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) rotate(-360deg);
-  border-radius: 50%;
-}
